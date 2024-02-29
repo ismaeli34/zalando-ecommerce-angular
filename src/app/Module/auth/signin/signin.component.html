@@ -1,0 +1,44 @@
+<div>
+
+    <form >
+
+        <h1>Shop with Ronney</h1>
+
+        <div>
+            <mat-form-field class="w-full">
+
+                <mat-label>Email</mat-label>
+                <input type="text" matInput formControlName="email" required email>
+                <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Email is required</mat-error>
+
+                <mat-error *ngIf="loginForm.controls['email'].hasError('email')">Please enter a valid email address.</mat-error>
+
+
+            </mat-form-field>
+
+
+            <mat-form-field class="w-full">
+
+                <mat-label>Password</mat-label>
+                <input type="text" matInput formControlName="password" required password>
+                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
+
+                <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Password should be atleast 8 characters long.</mat-error>
+
+
+            </mat-form-field>
+
+            <div>
+                <button color="accent" style="padding:1.7rem" mat-raised-button class="w-full">
+                    LOGIN
+                </button>
+            </div>
+
+            <div>
+                <span> If you do not have account ? </span>
+                <button mat-button color ="accent" (click)="changeTemplate()">REGISTER</button>
+            </div>
+        </div>
+    </form>
+
+</div>
