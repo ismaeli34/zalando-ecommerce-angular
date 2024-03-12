@@ -1,10 +1,18 @@
 # ModernEcommerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+This angular application is designed to facilitate the buying and selling of clothing and accessories. These applications provide a virtual storefront for brands, ranging from global retailers to small boutique labels, enabling them to showcase their products to a wider audience without the need for a physical presence.
+
+![4](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/2c0ab334-b9c0-42bf-b850-df5136825631)
+![2](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/da59b6fd-61ee-43be-b2b4-ebeefaa7a754)
+![5](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/ea07b150-d26b-4bea-82ba-2207b8753962)
+![3](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/9cdfe55d-96e5-4484-bbe3-a0cd3a3d6890)
+![1](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/16cf744b-f3bc-48a7-a16b-70611c3be952)
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4![4](https://github.com/ismaeli34/zalando-ecommerce-angular/assets/17925504/a2d359c3-3914-4679-bc24-1627e373652f)
+200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
