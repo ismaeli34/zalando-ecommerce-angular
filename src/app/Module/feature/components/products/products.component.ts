@@ -47,17 +47,13 @@ handleMultipleSelectFilter(value:string, sectionId:string){
   }else{
     filterValues.push(value);
     console.log("value after push", filterValues);
-
   }
-
-  
 
   if(filterValues.length >0){
     queryParams[sectionId]=filterValues.join(",")
   }else{
     delete queryParams[sectionId];
   }
-
 
   this.router.navigate([],{queryParams});
 

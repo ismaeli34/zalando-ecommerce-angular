@@ -1,0 +1,117 @@
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-12 px-5 lg:px-20">
+
+    <div class="col-span-1 lg:col-span-5">
+
+        <div class="rounded-md shadow-md h-[32.2rem] overflow-y-scroll hide-scrollbar box py-5">
+            <div class="p-5 py-7 cursor-pointer">
+
+                <div *ngFor="let item of addresses; let last=last" class="py-2 space-y-2">
+                    <app-address-card [address]="item"></app-address-card>
+                    <button mat-raised-button style="padding: 1.6rem;" color="accent" (click)="handleCreateOrder(item)">
+                        Deliver Here
+                    </button>
+                    <mat-divider *ngIf="!last"></mat-divider>
+    
+                </div>
+    
+            </div>
+
+        </div>
+
+       
+
+    </div>
+
+    <div class="col-span-1 lg:col-span-7">
+        <div class="rounded-md shadow-md p-5 box">
+
+            <form [formGroup] ="myForm" (ngSubmit)="handleSubmit()">
+
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>First Name</mat-label>
+                        <input type="text" matInput formControlName="firstName" 
+                        placeholder="First Name" autocomplete="Given Name">
+
+                    </mat-form-field>
+
+                </div>
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" matInput formControlName="lastName" 
+                        placeholder="Last Name" autocomplete="Given Name">
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-span-2">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Address</mat-label>
+                        <textarea type="text" matInput formControlName="streetaddress" 
+                        placeholder="Address" autocomplete="Given Address"></textarea>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>City</mat-label>
+                        <input type="text" matInput formControlName="city" 
+                        placeholder="City" autocomplete="Given City">
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>State</mat-label>
+                        <input type="text" matInput formControlName="state" 
+                        placeholder="State" autocomplete="Given State">
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Zipcode</mat-label>
+                        <input type="text" matInput formControlName="zipcode" 
+                        placeholder="Zip Cpde" autocomplete="Given zipcode">
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="col-span-1">
+                    <mat-form-field appearance="fill" class="w-full">
+                        <mat-label>Phone Number</mat-label>
+                        <input type="text" matInput formControlName="mobile" 
+                        placeholder="Phone Number" autocomplete="Given phone number">
+
+                    </mat-form-field>
+
+                </div>
+                <div class="col-span-2">
+                    <button class="w-full" style="padding:1.5rem;" color="accent" type="submit" mat-raised-button>Deliver Here</button>
+
+                </div>
+              
+
+                </div>
+
+
+                
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

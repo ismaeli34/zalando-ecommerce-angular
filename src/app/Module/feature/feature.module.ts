@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
@@ -25,9 +25,11 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
 import { ProductReviewComponent } from './components/product-details/product-review/product-review.component';
 import { ProductReviewCardComponent } from './components/product-details/product-review-card/product-review-card.component';
 import { StarRatingModule } from 'angular-star-rating';
-
-
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AddressFormComponent } from './components/checkout/address-form/address-form.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { OrderCardComponent } from './components/order/order-card/order-card.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     OrderComponent,
     OrderDetailsComponent,
     ProductReviewComponent,
-    ProductReviewCardComponent
+    ProductReviewCardComponent,
+    AddressFormComponent,
+    OrderCardComponent,
   ],
   imports: [
     CommonModule,
@@ -60,7 +64,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatRadioModule,
     StarRatingModule.forRoot(),
     SharedModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[
     FeatureComponent,

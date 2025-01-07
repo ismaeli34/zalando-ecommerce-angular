@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { lehngacholiPage2 } from 'src/Data/Saree/lenghaCholiPage2';
 
 @Component({
@@ -8,6 +9,10 @@ import { lehngacholiPage2 } from 'src/Data/Saree/lenghaCholiPage2';
 })
 export class ProductDetailsComponent {
 
+  constructor(private router: Router){
+
+  }
+
   selectedSize:any;
 
   reviews=[1,1,1,1];
@@ -16,6 +21,7 @@ export class ProductDetailsComponent {
 
   handleAddtoCart(){
     console.log("selected size",this.selectedSize);
+    this.router.navigate(['cart'])
     
   }
 

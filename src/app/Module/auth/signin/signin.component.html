@@ -1,17 +1,17 @@
-<div>
+<div style="max-width: 400px; margin: 0 auto; padding: 1rem; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 8px;">
 
-    <form >
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
 
-        <h1>Shop with Ronney</h1>
+        <h1 style="text-align: center;">Shop with Ronney</h1>
 
         <div>
-            <mat-form-field class="w-full">
+            <mat-form-field class="w-full" style="width: 100%;">
 
                 <mat-label>Email</mat-label>
                 <input type="text" matInput formControlName="email" required email>
-                <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Email is required</mat-error>
+                <mat-error *ngIf="registerForm.controls['email'].hasError('required')">Email is required</mat-error>
 
-                <mat-error *ngIf="loginForm.controls['email'].hasError('email')">Please enter a valid email address.</mat-error>
+                <mat-error *ngIf="registerForm.controls['email'].hasError('email')">Please enter a valid email address.</mat-error>
 
 
             </mat-form-field>
@@ -21,9 +21,9 @@
 
                 <mat-label>Password</mat-label>
                 <input type="text" matInput formControlName="password" required password>
-                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
+                <mat-error *ngIf="registerForm.controls['password'].hasError('required')">Password is required</mat-error>
 
-                <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Password should be atleast 8 characters long.</mat-error>
+                <mat-error *ngIf="registerForm.controls['password'].hasError('minlength')">Password should be atleast 8 characters long.</mat-error>
 
 
             </mat-form-field>
@@ -36,7 +36,7 @@
 
             <div>
                 <span> If you do not have account ? </span>
-                <button mat-button color ="accent" (click)="changeTemplate()">REGISTER</button>
+                <button type="submit" mat-button color ="accent" (click)="changeTemplate()">REGISTER</button>
             </div>
         </div>
     </form>
