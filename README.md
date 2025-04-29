@@ -1,4 +1,4 @@
-# ModernEcommerce
+# OutfitOrbit
 
 This angular application is designed to facilitate the buying and selling of clothing and accessories. These applications provide a virtual storefront for brands, ranging from global retailers to small boutique labels, enabling them to showcase their products to a wider audience without the need for a physical presence.
 
