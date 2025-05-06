@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class PaymentComponent {
 
+  products =[1,1,1,1,1,1];
+
+  navigateToCheckout(){
+    
+  }
+
 }
